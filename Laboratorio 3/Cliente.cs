@@ -15,14 +15,14 @@ namespace Laboratorio_3
             Correo = correo;
             Direccion = direccion;
             Descuento = descuento;
+            Vehiculos = new List<Vehiculo>();
         }
 
         public string Nombre { get; set; }
         public string Correo { get; set; }
         public string Direccion { get; set; }
         public double Descuento {  get; set; }
-
-
+        public List<Vehiculo> Vehiculos { get; set; }
         public virtual void MostrarInformacion()
         {
             Console.WriteLine("--------CLIENTE--------");
