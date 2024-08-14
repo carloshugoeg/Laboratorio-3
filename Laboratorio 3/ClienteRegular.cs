@@ -8,7 +8,7 @@ namespace Laboratorio_3
 {
     public class ClienteRegular:Cliente
     {
-        public ClienteRegular(string nombre, string correo, string direccion, double descuento) : base(nombre, correo, direccion, descuento) { }
+        public ClienteRegular(string nombre, string correo, string direccion, double descuento) : base(nombre, correo, direccion, descuento) { Vehiculos = new List<Vehiculo>(); }
 
     }
 }

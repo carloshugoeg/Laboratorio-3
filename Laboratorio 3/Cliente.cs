@@ -14,7 +14,7 @@ namespace Laboratorio_3
             Nombre = nombre;
             Correo = correo;
             Direccion = direccion;
-            Descuento = descuento;
+            Descuento = 0;
             Vehiculos = new List<Vehiculo>();
         }
 
@@ -30,6 +30,13 @@ namespace Laboratorio_3
             Console.WriteLine("\nCorreo: " + Correo);
             Console.WriteLine("\nDireccion: " + Correo);
             if (Descuento > 0) Console.WriteLine($"\nDescuento: {Descuento*100}%");
+            if (Vehiculos.Count > 0)
+            {
+                foreach (var vehiculo in Vehiculos)
+                {
+                    vehiculo.MostrarInformacion();
+                }
+            }
         }
         public virtual double AplicarDescuento(double precio)
         {
@@ -37,12 +44,13 @@ namespace Laboratorio_3
             {
                 return precio;
             }
-            Console.WriteLine("TU membresia tiene un descuento!!");
+            Console.WriteLine("Tu membresia tiene un descuento!!");
             Console.WriteLine("\nPrecio Anterior: Q." + precio);
             precio = (precio) - (precio * Descuento);
             Console.WriteLine("Nuevo Precio: Q." + precio);
             Console.ReadLine();
             return precio;
         }
+        public virtual void AsignarVehiculo(Vehiculo vehiculo) => Vehiculos.Add(vehiculo);
     }
 }

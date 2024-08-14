@@ -8,6 +8,6 @@ namespace Laboratorio_3
 {
     internal class ClienteVIP : Cliente
     {
-        public ClienteVIP(string nombre, string correo, string direccion, double descuento) : base(nombre, correo, direccion, descuento) { }
+        public ClienteVIP(string nombre, string correo, string direccion, double descuento) : base(nombre, correo, direccion, descuento) { Vehiculos = new List<Vehiculo>(); }
     }
 }
