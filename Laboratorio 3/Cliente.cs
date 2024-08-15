@@ -14,7 +14,7 @@ namespace Laboratorio_3
             Nombre = nombre;
             Correo = correo;
             Direccion = direccion;
-            Descuento = 0;
+            Descuento = descuento;
             Vehiculos = new List<Vehiculo>();
         }
 
@@ -28,8 +28,8 @@ namespace Laboratorio_3
             Console.WriteLine("--------CLIENTE--------");
             Console.WriteLine("\nNombre: " + Nombre);
             Console.WriteLine("\nCorreo: " + Correo);
-            Console.WriteLine("\nDireccion: " + Correo);
-            if (Descuento > 0) Console.WriteLine($"\nDescuento: {Descuento*100}%");
+            Console.WriteLine("\nDireccion: " + Direccion);
+            if (Descuento != -1) Console.WriteLine($"\nDescuento: {Descuento*100}%");
             if (Vehiculos.Count > 0)
             {
                 foreach (var vehiculo in Vehiculos)
